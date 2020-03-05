@@ -1,0 +1,21 @@
+<!--pages/button/button.wxml-->
+<!-- 1.基本使用 -->
+<button>pages/button/button.wxml</button>
+
+<!-- 2.size属性让button默认display：block变成display：inline-block
+ 和 type属性-->
+<button size='mini' type='primary'>按钮</button>
+<button size='mini' type='default'>按钮</button>
+<button size='mini' type='warn'>按钮</button>
+
+<!-- plain楼空 -->
+<button plain>按钮</button>
+
+<!-- disabled  loading-->
+<button disabled>按钮</button>
+<button loading>按钮</button>
+
+
+<!-- hover-class=none时，点击没效果 -->
+<button hover-class="none">按钮</button>
+<button hover-class="activecolor">按钮</button>

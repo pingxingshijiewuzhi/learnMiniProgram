@@ -1,0 +1,5 @@
+/* pages/button/button.wxss */
+.activecolor{
+  background-color: red;
+  color:white;
+}
