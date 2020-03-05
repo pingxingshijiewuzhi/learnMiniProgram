@@ -1,3 +1,6 @@
 <!--pages/home/home.wxml-->
 <text class='title'>hello world</text>
 <button size='mini'>按钮</button>
+
+<view>1.知识点1练习打git tag</view>
+<view>哈哈哈哈</view>
