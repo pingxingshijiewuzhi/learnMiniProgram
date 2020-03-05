@@ -1,0 +1,34 @@
+<!--pages/input/input.wxml-->
+
+<!-- 1.基本使用 -->
+<input></input>
+
+<!-- 2.value默认值 -->
+<input value='haha'></input>
+
+<!-- 3.type:决定键盘类型 -->
+<input type='text'></input>
+<input type='number'></input>
+<input type='idcard'></input>
+<input type='digit'></input>
+
+<!-- 4.password:暗文 -->
+<input password></input>
+
+<!-- 5.placeholder,disabled这个是基础 -->
+
+<!--6. confirm-type 
+真机测试一下，这能控制手机弹出键盘右下角按钮文字，灵验
+设置键盘右下角按钮的文字，仅在type='text'时生效 -->
+<input type='text' confirm-type='send'></input>
+<input type='text' confirm-type='search'></input>
+<input type='text' confirm-type='next'></input>
+<input type='text' confirm-type='go'></input>
+
+<view>--------------------------</view>
+<!-- 7.Input绑定时间 -->
+<input bindinput="handleInput"
+      bindfocus="handleFocus"
+      bindblur="handleBlur"
+      ></input>
+ 

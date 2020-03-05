@@ -1,0 +1,30 @@
+<!--pages/view/view.wxml-->
+
+<!-- 1.view的基本使用 -->
+<view>哈哈</view>
+<view>呵呵</view>
+
+<!-- 2.鼠标单机类开始和结束显示时间停留 
+hover-stay-time
+hover-start-time
+-->
+<view class='box'
+hover-class="hover-view"
+hover-stay-time="1000"
+>box盒子</view>
+
+<!-- hover-stop-propagation ：事件冒泡
+指定是否阻止本节点的祖先节点出现点击态-->
+<view class='boxdiv' hover-class="boxdiv-view">
+  <view class='box'
+  hover-class="hover-view"
+  >box盒子</view>
+</view>
+
+<view class='boxdiv' hover-class="boxdiv-view" >
+  <view class='box'
+  hover-class="hover-view"
+  hover-stop-propagation
+  >box盒子</view>
+</view>
+

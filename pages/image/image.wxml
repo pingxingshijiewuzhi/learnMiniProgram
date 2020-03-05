@@ -1,0 +1,29 @@
+<!--pages/image/image.wxml-->
+<!--基本使用
+ 1.image组建可以写成单标签，也可以写成双标签
+      2.imgage组建默认有自己的大小 320*240
+      3.image是行内块元素 -->
+<!-- <image></image> -->
+
+<!-- src本地地址(相对路径和绝对路径都可以)/远程地址 -->
+<image src='../../coderwhy.png'></image>
+<image src='/coderwhy.png'></image>
+<image src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'></image>
+
+<!-- 补充选择相册的图片 -->
+<button bindtap='handleChooseAlb'>选择图片</button>
+<image src='{{imagepath}}'></image>
+
+<!-- bindload当图片载入完毕时触发，event.detail = {height, width}
+lazy-load懒加载 -->
+<image
+wx:for='{{1}}'
+lazy-load
+bindload='handleImageLoad'
+src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'></image>
+
+
+<!-- show-menu-by-longpress 开启长按图片显示识别小程序码菜单-->
+<image show-menu-by-longpress src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'></image>
+
+<image mode='top left' src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'></image>
