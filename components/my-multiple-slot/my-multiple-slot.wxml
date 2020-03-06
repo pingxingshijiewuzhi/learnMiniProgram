@@ -1,0 +1,12 @@
+<!--components/my-multiple-slot/my-multiple-slot.wxml-->
+<view>我是mymultiple开头</view>
+<view class='view1'>
+<slot name='slot1'></slot>
+</view>
+<view class='view2'>
+<slot name='slot2'></slot>
+</view>
+<view class='view3'>
+<slot name='slot3'></slot>
+</view>
+<view>我是mymultiple结尾</view>
