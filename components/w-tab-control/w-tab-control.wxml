@@ -1,0 +1,11 @@
+<!--components/w-tab-contral/w-tab-contral.wxml-->
+<view class='tab-control'>
+<block wx:for='{{titles}}' wx:key='{{index}}'>
+    <view bindtap="handleClick"
+    data-index='{{index}}'
+class='tab-item {{currentIndex == index ? "active" : ""}} '>
+<text>{{item}}</text>
+</view>
+</block>
+
+</view>

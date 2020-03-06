@@ -1,3 +1,10 @@
 <!--pages/home/home.wxml-->
 <text class='title'>hello world</text>
 <button size='mini'>按钮</button>
+
+<w-tab-control titles="{{['流行','精选','新款']}}"
+bind:itemclick='tabControlClick'
+></w-tab-control>
+
+<button size='mini' bindtap='handleIncrement'>修改组件内的数据</button>
+<mt-sel id='sel-id'></mt-sel>

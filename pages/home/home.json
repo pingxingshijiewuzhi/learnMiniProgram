@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-tab-control":"/components/w-tab-control/w-tab-control",
+    "mt-sel":"/components/my-sel/my-sel"
+  }
 }
