@@ -1,66 +1,47 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  // 常见的事件类型
+  handleBtnClick(){
+    console.log('按钮被点击了')
+  },
+  handleTouchMove(){
+    console.log('handleTouchMove')
+  },
+  handleTouchStart() {
+    console.log('handleTouchStart')
+  },
+  handleTouchEnd(){
+    console.log('handleTouchEnd')
+  },
+  handleLongpress(){
+    console.log('超过350ms了handleLongpress')
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 捕获事件
+  handleCaptureView1(){
+    console.log('handleCaptureView1')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleCaptureView2() {
+    console.log('handleCaptureView2')
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleCaptureView3() {
+    console.log('handleCaptureView3')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  // 阻止事件冒泡
+  handleCatchView1(){
+    console.log('我是最外面大盒子，阻止事件捕获')
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  // 冒泡事件
+  handleBindView1(){
+    console.log('handleBindView1')
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleBindView2() {
+    console.log('handleBindView2')
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleBindView3() {
+    console.log('handleBindView3')
   }
 })

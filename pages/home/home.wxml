@@ -1,3 +1,35 @@
 <!--pages/home/home.wxml-->
 <text class='title'>hello world</text>
-<button size='mini'>按钮</button>
+<!-- 事件处理的回顾，效果一样 -->
+<button bindtap='handleBtnClick' size='mini'>按钮</button>
+<button bind:tap='handleBtnClick' size='mini'>按钮</button>
+<button catch:tap='handleBtnClick' size='mini'>按钮</button>
+
+
+<!-- 常见的事件类型
+点击开始
+点击移动
+点击松开
+长按超过350ms
+ -->
+<view class='box'
+bindtouchmove="handleTouchMove"
+bindtouchend="handleTouchEnd"
+bindtouchstart="handleTouchStart"
+bind:longpress='handleLongpress'>
+</view>
+
+<!-- 小程序的事件捕获和事件冒泡 -->
+<!-- capture-bind:tap='handleCaptureView1'  -->
+<view class="view1" 
+capture-catch:tap='handleCatchView1'
+bindtap="handleBindView1">
+  <view class='view2' 
+  capture-bind:tap='handleCaptureView2'
+  bindtap="handleBindView2">
+    <view class='view3' 
+    capture-bind:tap='handleCaptureView3'
+    bindtap="handleBindView3">
+    </view>
+  </view>
+</view>
