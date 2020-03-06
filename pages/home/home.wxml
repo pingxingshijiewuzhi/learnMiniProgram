@@ -1,3 +1,19 @@
 <!--pages/home/home.wxml-->
-<text class='title'>hello world</text>
+<text class='title'>hello world我是汉字</text>
 <button size='mini'>按钮</button>
+
+<!-- 1.基本使用 -->
+<!-- <my-cpn/> -->
+
+<!-- 样式问题组建相互影响的问题 -->
+<!-- <my-style></my-style> -->
+
+<!-- 传递参数和类 -->
+<my-prop title='哈哈' titleclass='red'></my-prop>
+<my-prop titleclass='blue'></my-prop>
+<my-prop title='嘻嘻' titleclass='green'></my-prop>
+
+<!-- 组建内部发出事件 -->
+<view>=====分界线========</view>
+<view>当前计数：{{counter}}</view>
+<my-event bind:increment='handIncrement'></my-event>
