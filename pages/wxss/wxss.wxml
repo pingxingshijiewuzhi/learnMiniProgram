@@ -1,0 +1,9 @@
+<!--pages/wxss/wxss.wxml-->
+
+<!-- 1.选择器权重，！import >行内>id>class>标签>伪选择器>通配 -->
+<!-- 行内，页内，全局添加样式就不说了 -->
+
+<!-- wxss中的单位rpx:  rpx是px一半大小ipone6标准
+前端也需要进行配置尺寸适配：rem，em,vh,vw-->
+<view class='box'>哈哈</view>
+<view class='box1'>哈哈</view>

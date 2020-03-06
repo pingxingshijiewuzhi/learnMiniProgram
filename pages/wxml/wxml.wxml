@@ -1,0 +1,27 @@
+<!--pages/wxml/wxml.wxml-->
+<button bindtap='handleSwitch' size='mini'>按钮改变显示与否</button>
+<view wx:if='{{isShow}}'>哈哈哈</view>
+
+<!-- hidden将组件隐藏起来，该组件依然存在，像vue的v-show
+wx:if 是渲不渲染问题 -->
+<view>-------------------</view>
+<view wx:for="{{['sfg','sadg','ehd']}}">{{item}}</view>
+
+
+<!-- block标签
+不是一个组件，仅仅是包裹元素，不会在页面中做任何渲染，只接受控制属性 -->
+<view wx:if='{{isShow}}'>
+<button size='mini'>按钮</button>
+<view>呵呵呵</view>
+<text>我是内容</text>
+</view>
+
+<block wx:if='{{isShow}}'>
+<button size='mini'>按钮</button>
+<view>呵呵呵</view>
+<text>我是内容</text>
+</block>   
+
+<!-- 因为多层遍历，所以要起名字避免冲突
+ for循环给item index起名字 -->
+<view wx:for='{{movies}}' wx:for-item='movie' wx:for-index='i'>{{movie}} {{i}}</view>

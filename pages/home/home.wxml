@@ -1,3 +1,5 @@
 <!--pages/home/home.wxml-->
 <text class='title'>hello world</text>
 <button size='mini'>按钮</button>
+<!-- 公共属性 -->
+<view hidden>hello，我隐藏</view>
