@@ -1,0 +1,40 @@
+// 对价格格式化
+function priceFormat(price,number){
+  var number = number || 2
+  return price.toFixed(number)
+}
+
+function timeFormat(data, fmt) {
+  return 20200306
+}
+
+// 对时间格式化不支持正则汗颜
+// function timeFormat(data,fmt){
+// if(/(y+)/.test(fmt)){
+//   fmt = fmt.replace(RegExp.$1,(date.getFullYear()+ '').substr(4-RegExp.$1.length))  
+// }
+//   let O = {
+//     'M+': date.getMonth() + 1,
+//     'd+': date.getDate(),
+//     'h+': date.getHours(),
+//     'm+': date.getMinutes(),
+//     's+': date.getSeconds()
+//   }
+//   for (let k in O) {
+//     if (new RegExp(`(${k})`).test(fmt)) {
+//       let str = O[k] + '';
+//       fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? str : padLeftZero(str));
+//     }
+
+//   }
+// return fmt
+// }
+
+// function padLeftZero(str) {
+//   return ('00' + str).substr(str.length);
+// }
+
+module.exports ={
+  priceFormat: priceFormat,
+  timeFormat: timeFormat
+}
