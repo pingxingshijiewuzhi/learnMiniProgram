@@ -7,60 +7,63 @@ Page({
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  hanndleShowToast(){
+    wx.showToast({
+      title: 'hello',
+      icon: 'success',
+      duration:3000,
+      // 就是弹窗蒙版，阻止下面还有页面交互
+      mask:true
+    })
+  },
+  hanndleshowModel(){
+    wx.showModal({
+      title: 'world',
+      content: '哈哈',
+      // 不显示取消按钮
+      // showCancel:false
+      success:function(res){
+        console.log(res)
+        if(res.cancle){
+          console.log('用户点击了取消按钮')
+        }
+        if(res.confirm){
+          console.log('用户点击了确定按钮')
+        }
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  hanndleshowLoading(){
+    wx.showLoading({
+      title: '加载中',
+    })
 
+    setTimeout(function () {
+      // 调用方法才能取消showLoading效果
+      wx.hideLoading()
+    }, 2000)
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  hanndleshowActionSheet(){
+    wx.showActionSheet({
+      itemList: ['A', 'B', 'C'],
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage(options){
+  // console.log(options)
+  return{
+    // 决定分享的文字内容，显示页面，图片
+    title:'hello world',
+    path:'/pages/about/about',
+    imageUrl:'https://developers.weixin.qq.com/miniprogram/dev/component/image.html'
+  }
   }
 })
