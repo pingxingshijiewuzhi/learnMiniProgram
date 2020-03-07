@@ -1,20 +1,13 @@
-// pages/home/home.js
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message:'哈哈哈'
+
   },
-  handlebtnClick(){
-      wx.navigateTo({
-        url: '/pages/detail/detail?name=wangzichi&age=18'
-      })
-    // wx.redirectTo({
-    //   url: '',
-    // })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
