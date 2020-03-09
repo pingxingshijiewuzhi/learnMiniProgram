@@ -1,0 +1,10 @@
+/* components/w-back-top/w-back-top.wxss */
+.backicon{
+  position:fixed;
+  right:8rpx;
+  bottom:10rpx;
+}
+.backicon .imgs{
+  width:90rpx;
+  height:90rpx;
+}

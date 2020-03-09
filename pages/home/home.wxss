@@ -1,4 +1,17 @@
-/* pages/home/home.wxss */
-.title{
-  color:red;
+.goods{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.item{
+  width:48%;
+  position:relative;
+  margin-top:16rpx;
+}
+.fixed{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index:1
 }
